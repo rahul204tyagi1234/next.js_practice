@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <div>
-      <h1>Welcome to about page</h1>
+      <h1 className="heading">Welcome to about page</h1>
       <button onClick={() => router.push("/")}>Go to home page</button>
       <br />
       <br />

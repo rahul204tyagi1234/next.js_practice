@@ -8,7 +8,7 @@ const Login = () => {
   };
   return (
     <div>
-      <h1>Welcome to login page</h1>
+      <h1 className="heading">Welcome to login page</h1>
       <Link href="/">Go to home page</Link>
       <br />
       <br />
