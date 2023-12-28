@@ -8,7 +8,8 @@ export default function Page(){
 
 export function generateMetadata(){  
     return{
-        title:"User page"
+        title:"User page",
+        description:"User page description"
     }
         
     
