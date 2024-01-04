@@ -7,7 +7,7 @@ export function GET(req, res) {
   return NextResponse.json(
     userData.length == 0
       ? { result: "User Not Found", success: false }
-      : { result: userData, success: true },
+      : { result: userData[0], success: true },
     { status: 200 }
   );
 }
@@ -17,7 +17,20 @@ export async function PUT(req,res){
   payload.id=res.params.userid;
 
   console.log(payload)
+  if(!payload.id || !payload.name || !payload.age || !payload.email){
+    return NextResponse.json({result:"your data is not vaild",success:false},{status:400})
+
+  }
 
   return NextResponse.json({result:payload,success:true},{status:200})
 
+}
+
+export function DELETE(req,content){
+  let id = content.params.userid;
+  if(id){
+    return NextResponse.json({result:"User Deleted",success:true,},{status:200})
+  }else{
+    return NextResponse.json({result:"Internal error",success:false},{status:400});
+  }
 }

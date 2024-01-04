@@ -25,24 +25,24 @@ export default function Page() {
     }
    
   return (
-    <div>
+    <div className='add-user'>
       <h1>Add new user</h1>
-      <input type="text" value={name} placeholder="Enter name" onChange={(e)=>setName(e.target.value)} />
+      <input className="input-field" type="text" value={name} placeholder="Enter name" onChange={(e)=>setName(e.target.value)} />
       <br></br>
       <br></br>
-      <input type="text" value={Age} placeholder="Enter Age" onChange={(e)=>setAge(e.target.value)} />
+      <input className="input-field" type="text" value={Age} placeholder="Enter Age" onChange={(e)=>setAge(e.target.value)} />
       <br></br>
       <br></br>
-      <input type="text" value={email} placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)} />
+      <input className="input-field" type="text" value={email} placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)} />
       <br></br>
       <br></br>
-      <input type="text" value={Address} placeholder="Enter Address" onChange={(e)=>setAddress(e.target.value)} />
+      <input className="input-field" type="text" value={Address} placeholder="Enter Address" onChange={(e)=>setAddress(e.target.value)} />
       <br></br>
       <br></br>
-      <input type="text" value={Aduction} placeholder="Enter Aduction" onChange={(e)=>setAduction(e.target.value)} />
+      <input className="input-field" type="text" value={Aduction} placeholder="Enter Aduction" onChange={(e)=>setAduction(e.target.value)} />
       <br></br>
       <br></br>
-      <button onClick={addUser}>Add User</button>
+      <button className='btn' onClick={addUser}>Add User</button>
     </div>
   );
 }
