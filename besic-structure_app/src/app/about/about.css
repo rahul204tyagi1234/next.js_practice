@@ -1,0 +1,25 @@
+.login-menu{
+    display: flex;
+}
+.login-menu li{
+    margin-left: 25px;
+    list-style-type: none;
+}
+.login-menu li a{
+    text-decoration: none;
+}
+.login-menu h3{
+    margin:0;
+}
+.heading{
+    color: aqua;
+    text-align: center;
+    margin-top: 50px;
+}
+p{
+    text-align: center;
+    border: 3px solid #000;
+    padding: 20px;
+    max-width: 500px;
+    margin-left: 650px;
+}
