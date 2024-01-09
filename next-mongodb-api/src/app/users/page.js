@@ -1,7 +1,8 @@
+import DeleteProduct from "@/lib/DeleteProduct";
 import Link from "next/link";
 
 const getUsers= async()=>{
-    let data= await fetch("http://localhost:3000/api/products");
+    let data= await fetch("http://localhost:3000/api/products",{cache:"no-cache"});
     data = await data.json();
     if(data.success){
 
@@ -26,6 +27,7 @@ export default async function Page(){
                     <th>Gender</th>
                     <th>Salary</th>
                     <th>Position</th>
+                    <th>Position</th>
                 </tr>
               </thead>
               <tbody>
@@ -35,7 +37,8 @@ export default async function Page(){
                     <td>{item.age}</td>
                     <td>{item.gender}</td>
                     <td>{item.salary}</td>
-                    <td><Link href={"/users/"+item._id}>Edit</Link></td>
+                    <td><Link href={"/users/"+item._id}> Edit</Link></td>
+                    <td><DeleteProduct id={item._id}/></td>
                      </tr>))
                 }
               </tbody>

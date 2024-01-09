@@ -35,7 +35,7 @@ export default function Page(props){
         });
         data= await data.json();
         if(data.success){
-            alert("User Detail has been updated")
+            alert("User Detail has been updated ")
         }
     }
 

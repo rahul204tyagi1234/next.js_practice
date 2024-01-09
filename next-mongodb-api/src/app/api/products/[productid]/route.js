@@ -20,3 +20,12 @@ export async function GET(request,contant){
     const result= await Product.findById(filter)
     return NextResponse.json({result,success:true})
 }
+
+export async function DELETE(request,content){
+    const userId= content.params.productid;
+    const filter={_id:userId}
+    await mongoose.connect("mongodb://localhost:27017")
+    const result= await Product.deleteOne(filter)
+    return NextResponse.json({result,success:true})
+    
+}
